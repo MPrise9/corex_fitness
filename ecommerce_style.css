@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bai Jamjuree";
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding: 6rem;
+}
+.navbar {
+  background-color: white;
+  height: 80px;
+  margin: 20px;
+  border-radius: 16px;
+  border-color: #ff8225;
+  border-style: double;
+  padding: 0.5rem;
+}
+.navbar-brand,
+.offcanvas-title {
+  font-family: "Audiowide";
+  font-size: 30px;
+}
+.icon-header {
+  color: #ff8225;
+  font-size: 16px;
+  padding: 20px;
+}
+.navbar-brand span,
+.offcanvas-title span,
+.hero-section span {
+  font-family: "Audiowide";
+  font-size: 30px;
+  color: #ff8225;
+  -webkit-text-stroke-color: #000;
+  -webkit-text-stroke-width: 1px;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+.nav-link {
+  color: #454545;
+  font-weight: 500;
+  position: relative;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+@media (min-width: 991px) {
+  .nav-link::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #ff8225;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-link:hover:before,
+  .nav-link.nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+/* Running Banner */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.carousel-caption h5 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 16px;
+}
+.card-body .btn {
+  background-color: #ff8225;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 20px;
+  margin: 10px 15px;
+  border-radius: 10px;
+  transition: 0.3s background-color;
+}
+.card-body .btn:hover {
+  background-color: #f79f5b;
+  color: white;
+}
+/* Featured Products Section */
+#featured-products .card {
+  text-align: center;
+}
+
+#featured-products .card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+#featured-products .card-title {
+  font-size: 18px;
+}
+
+#featured-products .card-text {
+  font-size: 16px;
+  color: #888;
+}
+#footer {
+  background: #222;
+  color: #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+#footer .container {
+  position: relative;
+  z-index: 2;
+}
+
+#footer .animated-text {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  animation: textAnimation 2s infinite;
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+#footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#footer .social-icons a {
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#footer .social-icons a:hover {
+  transform: scale(1.2);
+  color: #0a0500;
+}
+
+.footer-bottom {
+  color: white;
+  position: relative;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.footer-bottom:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: white;
+  box-shadow: 0 0 10px rgba(255, 130, 37, 0.5);
+  z-index: -1;
+}
+
+@keyframes footerBgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#footer {
+  background: linear-gradient(270deg, #ff8225, #ffa559);
+  background-size: 400% 400%;
+  animation: footerBgAnimation 15s ease infinite;
+}
+.coming-soon {
+  animation: textAnimation 2s infinite;
+  color: #ffa559;
+}
