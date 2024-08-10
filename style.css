@@ -170,7 +170,7 @@ html {
 }
 
 .welcome {
-  padding: 80px 0;
+  padding: 60px 10px;
   background-color: white;
   color: black;
 }
@@ -179,14 +179,16 @@ html {
   width: 100%;
   max-width: 600px;
   border-radius: 10px;
-  padding: 10px;
-  margin: 20px;
+  padding: 5px;
+  margin: 20px auto;
+  display: block;
   border: 2px double #ff8225;
 }
 
 .welcome-content {
-  padding: 20px;
-  margin-right: 20px;
+  padding: 20px 15px; 
+  margin-right: 10px;
+  text-align: center; 
 }
 
 .welcome-heading,
@@ -209,7 +211,7 @@ html {
 .welcome p {
   font-size: 1rem;
   margin-bottom: 30px;
-  margin-right: 40px;
+  margin-right: 30px;
   line-height: 1.5;
   text-align: justify;
   animation: slideInFromRight 3s ease 3;
